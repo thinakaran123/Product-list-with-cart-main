@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Product list with cart</title>
+
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="font-redhat bg-Rose50 flex flex-col items-center relative h-screen"
+  >
+    <div
+      class="flex flex-col gap-5 screen5:flex-row screen5:m-16 w-[90%] m-auto"
+    >
+      <div class="flex flex-col gap-5 items-center w-full h-full">
+        <p class="font-bold text-4xl self-start">Desserts</p>
+        <div
+          class="grid screen3:grid-cols-2 screen5:grid-cols-3 w-full gap-6 screen5:gap-x-0 screen5:gap-y-5"
+        >
+          <!-- 1st item -->
+          <div class="w-full item-element" data-item-name="Waffle with Berries">
+            <div
+              id="product_id_1"
+              class="screen6:w-[80%] screen6:h-48 screen5:w-full screen5:h-[10.5rem] relative flex flex-col h-52 w-full screen4:h-60"
+            >
+              <img
+                class="absolute rounded-md h-[90%] w-full"
+                src="../assets/images/image-waffle-mobile.jpg"
+                alt=""
+              />
+              <button
+                data-item-name="Waffle with Berries"
+                data-item-price="6.50"
+                data-item-img="../assets/images/image-waffle-mobile.jpg"
+                class="fstbtn items-center screen5:px-3 gap-2 justify-end self-center bottom-0 bg-white absolute border hover:border-Red hover:text-Red border-Rose300 rounded-full px-6 py-2 flex"
+              >
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <p class="text-Rose900 font-semibold hover:text-Red">
+                  Add to Cart
+                </p>
+              </button>
+              <!-- //nd button -->
+              <button
+                class="sndbtn bg-Red hidden items-center screen5:px-3 gap-10 justify-end self-center bottom-0 absolute border hover:border-Red hover:text-Red border-Rose300 rounded-full py-2"
+              >
+                <img
+                  src="./assets/images/icon-decrement-quantity.svg"
+                  class="minusimg px-1 py-2 rounded-[50%] border border-solid border-white"
+                  alt=""
+                />
+
+                <p class="text-Rose50 countofitems">1</p>
+                <img
+                  class="addimg px-1 py-1 rounded-[50%] border border-solid border-white"
+                  src="./assets/images/icon-increment-quantity.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <p class="text-Rose400 text-sm">Waffle</p>
+            <p class="text-Rose900 font-semibold">Waffle with Berries</p>
+            <p class="text-Red font-semibold">
+              $<span class="priceofitem">6.50</span>
+            </p>
+          </div>
+          <!-- 2nd item -->
+          <div class="w-full" data-item-name="Vanilla Bean Crème Brûlée">
+            <div
+              class="screen6:w-[80%] screen6:h-48 screen5:w-full screen5:h-[10.5rem] relative flex flex-col h-52 w-full screen4:h-60"
+            >
+              <img
+                class="absolute rounded-md h-[90%] w-full"
+                src="./assets/images/image-creme-brulee-mobile.jpg"
+                alt=""
+              />
+              <button
+                data-item-price="7.00"
+                data-item-name="Vanilla Bean Crème Brûlée"
+                data-item-img="./assets/images/image-creme-brulee-mobile.jpg"
+                class="fstbtn screen5:px-3 items-center gap-2 justify-end self-center bottom-0 bg-white absolute border hover:border-Red border-Rose300 rounded-full px-6 py-2 flex"
+              >
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <p class="text-Rose900 font-semibold hover:text-Red">
+                  Add to Cart
+                </p>
+              </button>
+              <!-- //nd button -->
+              <button
+                class="sndbtn bg-Red hidden items-center screen5:px-3 gap-10 justify-end self-center bottom-0 absolute border hover:border-Red hover:text-Red border-Rose300 rounded-full py-2"
+              >
+                <img
+                  src="./assets/images/icon-decrement-quantity.svg"
+                  class="minusimg px-1 py-2 rounded-[50%] border border-solid border-white"
+                  alt=""
+                />
+
+                <p class="text-Rose50 countofitems">1</p>
+                <img
+                  class="addimg px-1 py-1 rounded-[50%] border border-solid border-white"
+                  src="./assets/images/icon-increment-quantity.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <p class="text-Rose400 text-sm">Crème Brûlée</p>
+            <p class="text-Rose900 font-semibold">Vanilla Bean Crème Brûlée</p>
+            <p class="text-Red font-semibold">
+              $<span class="priceofitem">7.00</span>
+            </p>
+          </div>
+          <!-- 3rd item -->
+          <div class="w-full">
+            <div
+              class="screen6:w-[80%] screen6:h-48 screen5:w-full screen5:h-[10.5rem] relative flex flex-col h-52 w-full screen4:h-60"
+            >
+              <img
+                class="absolute rounded-md h-[90%] w-full"
+                src="./assets/images/image-macaron-mobile.jpg"
+                alt=""
+              />
+              <button
+                data-item-price="8.00"
+                data-item-name="Macaron Mix of Five"
+                data-item-img="./assets/images/image-macaron-mobile.jpg"
+                class="fstbtn screen5:px-3 gap-2 items-center justify-end self-center bottom-0 bg-white absolute border hover:border-Red border-Rose300 rounded-full px-6 py-2 flex"
+              >
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <p class="text-Rose900 font-semibold hover:text-Red">
+                  Add to Cart
+                </p>
+              </button>
+              <!-- //nd button -->
+              <button
+                class="sndbtn bg-Red hidden items-center screen5:px-3 gap-10 justify-end self-center bottom-0 absolute border hover:border-Red hover:text-Red border-Rose300 rounded-full py-2"
+              >
+                <img
+                  src="./assets/images/icon-decrement-quantity.svg"
+                  class="minusimg px-1 py-2 rounded-[50%] border border-solid border-white"
+                  alt=""
+                />
+
+                <p class="text-Rose50 countofitems">1</p>
+                <img
+                  class="addimg px-1 py-1 rounded-[50%] border border-solid border-white"
+                  src="./assets/images/icon-increment-quantity.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <p class="text-Rose400 text-sm">Macaron</p>
+            <p class="text-Rose900 font-semibold">Macaron Mix of Five</p>
+            <p class="text-Red font-semibold">
+              $<span class="priceofitem">8.00</span>
+            </p>
+          </div>
+          <!-- 4th item -->
+          <div class="w-full">
+            <div
+              class="screen6:w-[80%] screen6:h-48 screen5:w-full screen5:h-[10.5rem] relative flex flex-col h-52 w-full screen4:h-60"
+            >
+              <img
+                class="absolute rounded-md h-[90%] w-full"
+                src="./assets/images/image-tiramisu-mobile.jpg"
+                alt=""
+              />
+              <button
+                data-item-img="./assets/images/image-tiramisu-mobile.jpg"
+                data-item-price="5.50"
+                data-item-name="Classic Tiramisu"
+                class="fstbtn screen5:px-3 gap-2 justify-end items-center self-center bottom-0 bg-white absolute border hover:border-Red border-Rose300 rounded-full px-6 py-2 flex"
+              >
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <p class="text-Rose900 font-semibold hover:text-Red">
+                  Add to Cart
+                </p>
+              </button>
+              <!-- //nd button -->
+              <button
+                class="sndbtn bg-Red hidden items-center screen5:px-3 gap-10 justify-end self-center bottom-0 absolute border hover:border-Red hover:text-Red border-Rose300 rounded-full py-2"
+              >
+                <img
+                  src="./assets/images/icon-decrement-quantity.svg"
+                  class="minusimg px-1 py-2 rounded-[50%] border border-solid border-white"
+                  alt=""
+                />
+
+                <p class="text-Rose50 countofitems">1</p>
+                <img
+                  class="addimg px-1 py-1 rounded-[50%] border border-solid border-white"
+                  src="./assets/images/icon-increment-quantity.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <p class="text-Rose400 text-sm">Tiramisu</p>
+            <p class="text-Rose900 font-semibold">Classic Tiramisu</p>
+            <p class="text-Red font-semibold">
+              $<span class="priceofitem">5.50</span>
+            </p>
+          </div>
+          <!-- 5th item -->
+          <div class="w-full">
+            <div
+              class="screen6:w-[80%] screen6:h-48 screen5:w-full screen5:h-[10.5rem] relative flex flex-col h-52 w-full screen4:h-60"
+            >
+              <img
+                class="absolute rounded-md h-[90%] w-full"
+                src="./assets/images/image-baklava-mobile.jpg"
+                alt=""
+              />
+              <button
+                data-item-img="./assets/images/image-baklava-mobile.jpg"
+                data-item-price="4.00"
+                data-item-name="Pistachio Baklava"
+                class="fstbtn screen5:px-3 gap-2 justify-end self-center items-center bottom-0 bg-white absolute border hover:border-Red border-Rose300 rounded-full px-6 py-2 flex"
+              >
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <p class="text-Rose900 font-semibold hover:text-Red">
+                  Add to Cart
+                </p>
+              </button>
+              <!-- //nd button -->
+              <button
+                class="sndbtn bg-Red hidden items-center screen5:px-3 gap-10 justify-end self-center bottom-0 absolute border hover:border-Red hover:text-Red border-Rose300 rounded-full py-2"
+              >
+                <img
+                  src="./assets/images/icon-decrement-quantity.svg"
+                  class="minusimg px-1 py-2 rounded-[50%] border border-solid border-white"
+                  alt=""
+                />
+
+                <p class="text-Rose50 countofitems">1</p>
+                <img
+                  class="addimg px-1 py-1 rounded-[50%] border border-solid border-white"
+                  src="./assets/images/icon-increment-quantity.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <p class="text-Rose400 text-sm">Baklava</p>
+            <p class="text-Rose900 font-semibold">Pistachio Baklava</p>
+            <p class="text-Red font-semibold">
+              $<span class="priceofitem">4.00</span>
+            </p>
+          </div>
+
+          <!-- 6th item -->
+          <div class="w-full">
+            <div
+              class="screen6:w-[80%] screen6:h-48 screen5:w-full screen5:h-[10.5rem] relative flex flex-col h-52 w-full screen4:h-60"
+            >
+              <img
+                class="absolute rounded-md h-[90%] w-full"
+                src="./assets/images/image-meringue-mobile.jpg"
+                alt=""
+              />
+
+              <button
+                data-item-img="./assets/images/image-meringue-mobile.jpg"
+                data-item-price="5.00"
+                data-item-name="Lemon Meringue Pie"
+                class="fstbtn screen5:px-3 gap-2 items-center justify-end self-center bottom-0 bg-white absolute border hover:border-Red border-Rose300 rounded-full px-6 py-2 flex"
+              >
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <p class="text-Rose900 font-semibold hover:text-Red">
+                  Add to Cart
+                </p>
+              </button>
+              <!-- //nd button -->
+              <button
+                class="sndbtn bg-Red hidden items-center screen5:px-3 gap-10 justify-end self-center bottom-0 absolute border hover:border-Red hover:text-Red border-Rose300 rounded-full py-2"
+              >
+                <img
+                  src="./assets/images/icon-decrement-quantity.svg"
+                  class="minusimg px-1 py-2 rounded-[50%] border border-solid border-white"
+                  alt=""
+                />
+
+                <p class="text-Rose50 countofitems">1</p>
+                <img
+                  class="addimg px-1 py-1 rounded-[50%] border border-solid border-white"
+                  src="./assets/images/icon-increment-quantity.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <p class="text-Rose400 text-sm">Pie</p>
+            <p class="text-Rose900 font-semibold">Lemon Meringue Pie</p>
+            <p class="text-Red font-semibold">
+              $<span class="priceofitem">5.00</span>
+            </p>
+          </div>
+
+          <!-- 7th item -->
+          <div class="w-full">
+            <div
+              class="screen6:w-[80%] screen6:h-48 screen5:w-full screen5:h-[10.5rem] relative flex flex-col h-52 w-full screen4:h-60"
+            >
+              <img
+                class="absolute rounded-md h-[90%] w-full"
+                src="./assets/images/image-cake-mobile.jpg"
+                alt=""
+              />
+              <button
+                data-item-img="./assets/images/image-cake-mobile.jpg"
+                data-item-price="4.50"
+                data-item-name="Red Velvet Cake"
+                class="fstbtn screen5:px-3 gap-2 justify-end items-center self-center bottom-0 bg-white absolute border hover:border-Red border-Rose300 rounded-full px-6 py-2 flex"
+              >
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <p class="text-Rose900 font-semibold hover:text-Red">
+                  Add to Cart
+                </p>
+              </button>
+              <!-- //nd button -->
+              <button
+                class="sndbtn bg-Red hidden items-center screen5:px-3 gap-10 justify-end self-center bottom-0 absolute border hover:border-Red hover:text-Red border-Rose300 rounded-full py-2"
+              >
+                <img
+                  src="./assets/images/icon-decrement-quantity.svg"
+                  class="minusimg px-1 py-2 rounded-[50%] border border-solid border-white"
+                  alt=""
+                />
+
+                <p class="text-Rose50 countofitems">1</p>
+                <img
+                  class="addimg px-1 py-1 rounded-[50%] border border-solid border-white"
+                  src="./assets/images/icon-increment-quantity.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <p class="text-Rose400 text-sm">Cake</p>
+            <p class="text-Rose900 font-semibold">Red Velvet Cake</p>
+            <p class="text-Red font-semibold">
+              $<span class="priceofitem">4.50</span>
+            </p>
+          </div>
+
+          <!-- 8th item   -->
+          <div class="w-full">
+            <div
+              class="screen6:w-[80%] screen6:h-48 screen5:w-full screen5:h-[10.5rem] relative flex flex-col h-52 w-full screen4:h-60"
+            >
+              <img
+                class="absolute rounded-md h-[90%] w-full"
+                src="./assets/images/image-brownie-mobile.jpg"
+                alt=""
+              />
+              <button
+                data-item-img="./assets/images/image-brownie-mobile.jpg"
+                data-item-price="4.50"
+                data-item-name="Salted Caramel Brownie"
+                class="fstbtn screen5:px-3 gap-2 justify-end self-center items-center bottom-0 bg-white absolute border hover:border-Red border-Rose300 rounded-full px-6 py-2 flex"
+              >
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <p class="text-Rose900 font-semibold hover:text-Red">
+                  Add to Cart
+                </p>
+              </button>
+              <!-- //nd button -->
+              <button
+                class="sndbtn bg-Red hidden items-center screen5:px-3 gap-10 justify-end self-center bottom-0 absolute border hover:border-Red hover:text-Red border-Rose300 rounded-full py-2"
+              >
+                <img
+                  src="./assets/images/icon-decrement-quantity.svg"
+                  class="minusimg px-1 py-2 rounded-[50%] border border-solid border-white"
+                  alt=""
+                />
+
+                <p class="text-Rose50 countofitems">1</p>
+                <img
+                  class="addimg px-1 py-1 rounded-[50%] border border-solid border-white"
+                  src="./assets/images/icon-increment-quantity.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <p class="text-Rose400 text-sm">Brownie</p>
+            <p class="text-Rose900 font-semibold">Salted Caramel Brownie</p>
+            <p class="text-Red font-semibold">
+              $<span class="priceofitem">4.50</span>
+            </p>
+          </div>
+
+          <!-- 9th item   -->
+          <div class="w-full">
+            <div
+              class="screen6:w-[80%] screen6:h-48 screen5:w-full screen5:h-[10.5rem] relative flex flex-col h-52 w-full screen4:h-60"
+            >
+              <img
+                class="absolute rounded-md h-[90%] w-full"
+                src="./assets/images/image-panna-cotta-mobile.jpg"
+                alt=""
+              />
+              <button
+                data-item-img="./assets/images/image-panna-cotta-mobile.jpg"
+                data-item-price="4.50"
+                data-item-name="Vanilla Panna Cotta"
+                class="fstbtn screen5:px-3 gap-2 justify-end self-center items-center bottom-0 bg-white absolute border hover:border-Red border-Rose300 rounded-full px-6 py-2 flex"
+              >
+                <img src="./assets/images/icon-add-to-cart.svg" alt="" />
+                <p class="text-Rose900 font-semibold hover:text-Red">
+                  Add to Cart
+                </p>
+              </button>
+              <!-- //nd button -->
+              <button
+                class="sndbtn bg-Red hidden items-center screen5:px-3 gap-10 justify-end self-center bottom-0 absolute border hover:border-Red hover:text-Red border-Rose300 rounded-full py-2"
+              >
+                <img
+                  src="./assets/images/icon-decrement-quantity.svg"
+                  class="minusimg px-1 py-2 rounded-[50%] border border-solid border-white"
+                  alt=""
+                />
+
+                <p class="text-Rose50 countofitems">1</p>
+                <img
+                  onclick="add()"
+                  class="addimg px-1 py-1 rounded-[50%] border border-solid border-white"
+                  src="../assets/images/icon-increment-quantity.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <p class="text-Rose400 text-sm">Panna Cotta</p>
+            <p class="text-Rose900 font-semibold">Vanilla Panna Cotta</p>
+            <p class="text-Red font-semibold">
+              $<span class="priceofitem">4.50</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="screen5:w-[30%] flex flex-col gap-6 pb-5 pt-3 px-3 bg-white w-full rounded-md h-[26%]"
+      >
+        <p class="text-Red font-bold text-xl">
+          Your Cart(<span id="total"></span>)
+        </p>
+        <div id="cart">
+          <img
+            class="m-auto w-28"
+            src="./assets/images/illustration-empty-cart.svg"
+            alt=""
+          />
+          <p id="lasttxt" class="text-sm m-auto">
+            Your added items will appear here
+          </p>
+        </div>
+        <div id="totalsec" class="flex justify-between">
+          <p class="self-center">Order Total</p>
+          <p class="text-2xl font-bold"><span id="totalprice"></span></p>
+        </div>
+        <div class="rounded-md flex bg-Rose50 py-2 px-5">
+          <img src="./assets/images/icon-carbon-neutral.svg" alt="" />
+          <p class="text-[12px]">
+            This is a <span class="font-semibold">carbon-neutral</span> delivery
+          </p>
+        </div>
+        <button
+          id="confirmorder"
+          class="w-full rounded-full bg-Red text-white py-2"
+        >
+          Confirm Order
+        </button>
+      </div>
+    </div>
+    <div
+      id="secoffinalcart"
+      class="bg-white hidden screen3:w-[40%] screen3:h-[100%] screen3:mt-[20%] p-5 w-full screen3:absolute screen3:inset-1/2 screen3:transform screen3:-translate-x-1/2 screen3:-translate-y-1/2"
+    >
+      <img src="./assets/images/icon-order-confirmed.svg" alt="" />
+      <p class="font-bold text-4xl">Order Confirmed</p>
+      <p class="text-Rose400">We hope you enjoy your food!</p>
+      <div id="finalcart" class="mt-10 mb-7 p-4 bg-Rose100 rounded-md"></div>
+      <button id="startnew" class="bg-Red rounded-full text-white w-full py-2">
+        Start New Order
+      </button>
+    </div>
+
+    <div class="attribution">
+      Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/thinakaran123"
+        target="_blank"
+        >Thinakaran</a
+      >.
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
